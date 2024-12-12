@@ -65,7 +65,7 @@ main.image {
 /* 在小螢幕時，將兩側區塊堆疊在一起 */
 @media (max-width: 768px) {
     main.image {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .team,
