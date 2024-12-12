@@ -1,0 +1,277 @@
+/* 全局重置，清除所有元素的內外邊距，設置盒子模型 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 設置盒子模型，包含邊框和內邊距 */
+}
+
+main.image {
+    display: flex;
+    flex-wrap: wrap;
+    /* 可在小螢幕上自動換行 */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: stretch;
+    height: 100vh;
+}
+
+/* 左側區塊設置 */
+.left-sections {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* 左側的每個 section */
+.left-sections section {
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/*flex: 1;：這裡的 flex: 1; 讓每個 <section> 元素在可用空間中自動擴展以填滿父容器。
+/* 右側「我們的團隊」區塊 */
+.team {
+    flex: 1;
+    /* 右側區塊佔據的寬度 */
+    padding: 20px;
+    color: white;
+    background-image: url('https://highrise.mikado-themes.com/wp-content/uploads/2016/10/Team-Title-1-1.jpg');
+    /* 用圖片的實際路徑替代 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+    /* 確保右側區塊較長 */
+}
+
+/* 滑鼠懸停效果 */
+.team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(255, 255, 255);
+}
+
+
+/* 在小螢幕時，將兩側區塊堆疊在一起 */
+@media (max-width: 768px) {
+    main.image {
+        flex-direction: column;
+    }
+
+    .team,
+    .left-sections {
+        flex: none;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #000;
+    /* 背景顏色 */
+    color: #fff;
+    /* 字體顏色 */
+    text-align: center;
+    /* 文字居中 */
+    padding: 20px;
+    /* 內邊距 */
+    font-size: 0.9rem;
+    /* 字體大小 */
+    width: 100%;
+    /* 寬度設置 */
+    position: relative;
+    /* 相對定位 */
+}
+
+footer p {
+    color: bisque;
+    /* 頁尾文字顏色 */
+}
+
+
+header {
+    background-color: #262626;
+    /* 頁首背景顏色 */
+}
+
+li {
+    list-style-type: none;
+    /* 列表樣式設置為無 */
+}
+
+a {
+    color: white;
+    /* 鏈接文字顏色 */
+    text-decoration: none;
+    /* 移除下劃線 */
+}
+
+.navbar {
+    min-height: 70px;
+    /* 導航欄最小高度 */
+    display: flex;
+    /* 使用彈性盒子模型 */
+    justify-content: space-between;
+    /* 在主軸上均勻分配空間 */
+    align-items: center;
+    /* 垂直居中對齊 */
+    padding: 0 24px;
+    /* 內邊距 */
+}
+
+.nav-menu {
+    display: flex;
+    /* 使用彈性盒子模型 */
+    justify-content: space-between;
+    /* 在主軸上均勻分配空間 */
+    align-items: center;
+    /* 垂直居中對齊 */
+    gap: 60px;
+    /* 子元素間的間距 */
+    z-index: 222;
+}
+
+.nav-branding {
+    font-size: 2rem;
+    /* 品牌名稱字體大小 */
+}
+
+.nav-link {
+    transition: 0.7s ease;
+    /* 鏈接的過渡效果 */
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+    /* 滑鼠懸停時改變顏色 */
+}
+
+.hamburger {
+    display: none;
+    /* 初始隱藏漢堡菜單 */
+    cursor: pointer;
+    /* 鼠標懸停時顯示為可點擊 */
+}
+
+.bar {
+    display: block;
+    /* 顯示條 */
+    width: 25px;
+    /* 條的寬度 */
+    height: 3px;
+    /* 條的高度 */
+    margin: 5px auto;
+    /* 上下邊距 */
+    transition: all 0.3s ease-in-out;
+    /* 過渡效果 */
+    background-color: white;
+    /* 條的顏色 */
+}
+
+/* 響應式設置，小螢幕時的樣式 */
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+        /* 顯示漢堡菜單 */
+    }
+
+    /* 漢堡菜單條狀態變化 */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+        /* 隱藏中間條 */
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        /* 上條旋轉 */
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        /* 下條旋轉 */
+    }
+
+    /* 導航菜單樣式 */
+    .nav-menu {
+        position: fixed;
+        /* 固定在頁面 */
+        left: -100%;
+        /* 初始隱藏 */
+        top: 70px;
+        /* 放在頁首下方 */
+        gap: 0;
+        /* 無間距 */
+        flex-direction: column;
+        /* 垂直排列 */
+        background-color: #262626;
+        /* 背景顏色 */
+        width: 100%;
+        /* 寬度設置 */
+        text-align: center;
+        /* 文字居中 */
+        transition: 0.3s;
+        /* 過渡效果 */
+    }
+
+    .nav-item {
+        margin: 16px 0;
+        /* 垂直間距 */
+    }
+
+    .nav-menu.active {
+        left: 0;
+        /* 顯示導航菜單 */
+    }
+}
+
+/* 調整小螢幕上的響應式佈局 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+        /* 標題縮小 */
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* 導航選單改為垂直排列 */
+        gap: 10px;
+        /* 調整間距 */
+        position: absolute;
+        /* 改為絕對定位 */
+        top: 80px;
+        /* 放在 header 下方 */
+        right: 20px;
+        /* 靠右對齊 */
+        background-color: rgba(0, 0, 0, 0.8);
+        /* 半透明背景 */
+        padding: 10px 20px;
+        /* 內邊距 */
+        border-radius: 5px;
+        /* 邊角圓滑 */
+    }
+
+    header {
+        height: auto;
+        /* 允許 header 高度自適應 */
+        padding: 10px;
+        /* 增加內邊距 */
+    }
+}

@@ -1,0 +1,291 @@
+/* Importing Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+/* 全局設置 */
+* {
+    margin: 0; /* 取消預設邊距 */
+    padding: 0; /* 取消預設內邊距 */
+    box-sizing: border-box; /* 設置盒子模型 */
+    font-family: "Inter", sans-serif; /* 使用 Inter 字體 */
+}
+
+/* 頁面背景設置 */
+.add {
+    display: flex; /* 使用彈性佈局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    min-height: 100vh; /* 至少佔滿整個視窗高度 */
+    background: linear-gradient(#ECEFFE, #CED6FB); /* 漸層背景 */
+}
+
+/* 卡片樣式 */
+.card-list .card-item {
+    list-style: none; /* 取消預設列表樣式 */
+}
+
+/* 卡片鏈接樣式 */
+.card-item .card-link {
+    display: block; /* 區塊顯示 */
+    padding: 18px; /* 內邊距 */
+    border-radius: 12px; /* 圓角 */
+    text-decoration: none; /* 取消下劃線 */
+    border: 2px solid transparent; /* 預設邊框為透明 */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); /* 添加陰影 */
+    transition: 0.2s ease; /* 添加過渡效果 */
+    height: 450px; /* 設置固定高度 */
+    width: 100%; /* 寬度100% */
+    padding-bottom: 50px; /* 底部內邊距 */
+    position: relative; /* 相對定位 */
+}
+
+/* 卡片鏈接懸停效果 */
+.card-list .card-item .card-link:hover {
+    border-color: #5372f0; /* 懸停時邊框顏色 */
+    cursor: grabbing; /* 懸停時變為手型 */
+}
+
+/* 卡片徽章樣式 */
+.card-list .card-link .badge {
+    color: #5372f0; /* 字體顏色 */
+    padding: 8px 16px; /* 內邊距 */
+    margin: 16px 0 18px; /* 外邊距 */
+    font-size: 0.95rem; /* 字體大小 */
+    font-weight: 500; /* 字體粗細 */
+    background: #dde4ff; /* 背景顏色 */
+    width: fit-content; /* 寬度自適應 */
+    border-radius: 50px; /* 圓角 */
+}
+
+/* 不同徽章顏色 */
+.card-list .card-link .badge.first {
+    color: #b22485; /* 第一個徽章字體顏色 */
+    background: #f7dff5; /* 第一個徽章背景顏色 */
+}
+
+.card-list .card-link .badge.second {
+    color: #b25a2b; /* 第二個徽章字體顏色 */
+    background: #ffe3d2; /* 第二個徽章背景顏色 */
+}
+
+.card-list .card-link .badge.third {
+    color: #640c58; /* 第三個徽章字體顏色 */
+    background: #fff3cd; /* 第三個徽章背景顏色 */
+}
+
+/* 卡片標題和按鈕樣式 */
+.card-link .card-title {
+    position: absolute; /* 絕對定位 */
+    bottom: 20px; /* 距底部20px */
+    left: 20px; /* 距左邊20px */
+    font-size: 1.2rem; /* 字體大小 */
+    color: #fff; /* 字體顏色 */
+    margin: 0; /* 取消外邊距 */
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem; /* 字體大小 */
+    color: #d71038; /* 字體顏色 */
+    font-weight: 600; /* 字體粗細 */
+}
+
+.card-link .card-button {
+    position: absolute; /* 絕對定位 */
+    bottom: 60px; /* 距底部60px */
+    left: 30px; /* 距左邊30px */
+    display: inline-block; /* 行內區塊顯示 */
+    font-size: 1.5rem; /* 字體大小 */
+    color: #fff; /* 字體顏色 */
+    padding: 5px; /* 內邊距 */
+    border-radius: 50%; /* 圓角 */
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+}
+
+/* 卡片懸停效果 */
+.card-list .card-link:hover .card-button {
+    color: #fff; /* 懸停時字體顏色 */
+    background: #5372f0; /* 懸停時背景顏色 */
+}
+
+/* 背景圖樣式 */
+.bg-pchome, .bg-shopee, .bg-third, .bg-fourth {
+    background-size: cover; /* 背景覆蓋 */
+    background-position: center; /* 背景居中 */
+    background-repeat: no-repeat; /* 不重複背景 */
+}
+
+.bg-pchome {
+    background-image: url('https://news.xfastest.com/wp-content/uploads/2018/05/%E6%9B%9C%E8%B6%8A%E5%85%A8%E6%96%B0VIEW-91%E9%BB%91%E7%99%BD%E9%9B%99%E6%98%9F%E6%B0%B4%E5%86%B7%E9%9B%BB%E7%AB%B6%E9%9B%BB%E8%85%A6%E6%AD%A3%E5%BC%8F%E4%B8%8A%E6%9E%B6PChome.png'); /* PChome背景圖 */
+}
+
+.bg-shopee {
+    background-image: url('https://i.pinimg.com/enabled_hi/564x/0f/46/de/0f46de5747fabc150b71f5b56f520991.jpg'); /* Shopee背景圖 */
+}
+
+.bg-third {
+    background-image: url('https://shoplineimg.com/54f5affde36c8e5e29000020/65b09c686e550ff86af4fcde/1296x.png?'); /* 第三個背景圖 */
+}
+
+.bg-fourth {
+    background-image: url('https://img.ltn.com.tw/Upload/3c/page/2021/10/19/211019-46333-1.jpeg'); /* 第四個背景圖 */
+}
+
+/* Swiper 基本樣式 */
+.swiper {
+    width: 100%; /* 寬度100% */
+    height: auto; /* 高度自適應 */
+    overflow: hidden; /* 隱藏溢出內容 */
+}
+
+.swiper-wrapper {
+    display: flex; /* 使用彈性佈局 */
+}
+
+.swiper-slide {
+    height: 150%; /* 高度150% */
+    width: 120%; /* 寬度120% */
+    transform: scale(1.1); /* 放大效果 */
+    transition: transform 0.3s ease; /* 過渡效果 */
+}
+
+/* Swiper 懸停效果 */
+.swiper-slide:hover {
+    transform: scale(1.15); /* 懸停時進一步放大 */
+}
+
+/* Swiper 分頁器樣式 */
+.swiper-pagination-bullet {
+    width: 12px; /* 分頁器圓點寬度 */
+    height: 12px; /* 分頁器圓點高度 */
+    background-color: #5372f0; /* 圓點顏色 */
+    opacity: 0.6; /* 不透明度 */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #5372f0; /* 活躍圓點顏色 */
+    opacity: 1; /* 完全不透明 */
+}
+
+/* Swiper 左右導航按鈕樣式 */
+.swiper-button-prev, .swiper-button-next {
+    color: #5372f0; /* 導航按鈕顏色 */
+    transition: color 0.3s; /* 過渡效果 */
+}
+
+/* 導航按鈕懸停效果 */
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    color: #000; /* 懸停時顏色 */
+}
+
+/* 卡片容器樣式 */
+.card-wrapper {
+    position: relative; /* 相對定位 */
+    width: 100%; /* 寬度100% */
+    overflow: hidden; /* 隱藏溢出內容 */
+    padding: 40px 0; /* 上下內邊距 */
+}
+
+.card-list {
+    display: flex; /* 使用彈性佈局 */
+    gap: 20px; /* 卡片間距 */
+    padding: 0 20px
+}
+header { 
+    background-color: rgba(35, 28, 26, 0.8); /* 半透明背景色 */
+    height: 80px; /* 高度設置 */
+    width: 100%; /* 寬度設置 */
+    top: 0; /* 固定在頁面頂部 */
+    position: fixed; /* 固定定位 */
+    z-index: 1000; /* 層級設定 */
+}
+header {
+    background-color: #262626;
+}
+li{
+    list-style-type: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-branding{
+    font-size: 2rem;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: dodgerblue;
+}
+.hamburger{
+    display: none;
+    cursor:pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin:  5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+@media(max-width:768px){
+    .hamburger{
+        display:block ;       
+                }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    }
+
+/* footer 區域樣式 */
+footer {
+    background-color: #000; /* 黑色背景 */
+    color: #fff; /* 白色文字 */
+    text-align: center; /* 文字居中 */
+    padding: 20px ; /* 上下內邊距 */
+    font-size: 0.9rem; /* 字體稍微縮小 */
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    position: fixed;
+}
+footer p {
+    color: bisque; /* 頁尾文字顏色 */
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息 - 電腦工仿</title>
+     <!-- 引入Google字體，這裡用於顯示icon -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+     <!-- 引入SwiperJS的CSS，提供Swiper功能所需的樣式 -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="lastest-new.css"> <!-- 這裡可以加入你的CSS -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="nav-branding">電腦工仿</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="INDEX.HTML" target="_blank" class="nav-link">回到首頁
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about-us.html" target="_blank" class="nav-link">關於我們</a>
+                </li>
+                <li class="nav-item">
+                    <a href="store-location.html" target="_blank" class="nav-link">門市據點</a>
+                </li>
+                <li class="nav-item">
+                    <a href="member-area.html" target="_blank" class="nav-link">會員專區</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        
+        
+    </header>
+
+    <main>
+        <!-- 加入一個Swiper輪播區域 -->
+        <section class="add">
+            <div class="container swiper">
+                <!-- 卡片列表容器，這裡包含所有卡片 -->
+                <div class="card-wrapper">
+                    <!-- SwiperJS的主要容器，.swiper-wrapper裡面放每個滑動的項目 -->
+                    <ul class="card-list swiper-wrapper">
+                        <!-- 每個li是一個Swiper滑動項目 -->
+                        <li class="card-item swiper-slide">
+                        <a href="https://24h.pchome.com.tw/?utm_source=google&utm_medium=cpc&utm_campaign=conversion_n3c_all_all_gg_pmax_mix_mktcampaign_awo&gad_source=1&gclid=Cj0KCQjwyL24BhCtARIsALo0fSDRD6r039a1lNN1cQY-rLRVooStRHxcxNqIWkzc6uvCBWPDAIfmA50aAl-9EALw_wcB" class="card-link bg-pchome">
+            
+                            <p class="badge first"><strong>發布日期：</strong>2024年10月1日</p>
+                            <!-- 卡片標題 -->
+                            <h2 class="card-title">新款式電腦上市</h2>
+                            <!-- 前進按鈕，帶有圖標 -->
+                            <button  class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>  
+                        </li>
+                        <!-- 重複的卡片項目，這裡只需改變圖片和文字 -->
+                        <li class="card-item swiper-slide">
+                        <a href="https://shopee.tw" class="card-link bg-shopee">
+                            <p class="badge second"><strong>發布日期：</strong>2024年9月25日</p>
+                            <h2 class="card-title">特價促銷活動</h2>
+                            <button  class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>  
+                        </li>
+                        <li class="card-item swiper-slide">
+                        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Funikoshardware.com%2F2021%2F04%2F2021-hyperx-reviewer-campaign-pr.html&psig=AOvVaw0LJR_vxeGZgVW1AHZKLyze&ust=1730105395468000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDI-IKXrokDFQAAAAAdAAAAABAE" class="card-link bg-third">
+                            <p class="badge third"><strong>發布日期：</strong>2024年10月15日</p>
+                            <h2 class="card-title">免費贈品</h2>
+                            <button  class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>  
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2F3c.ltn.com.tw%2Fnews%2F46333&psig=AOvVaw0VRBlHScJaeC3k8aBYZY74&ust=1730105248391000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMChj7yWrokDFQAAAAAdAAAAABAE" class="card-link bg-fourth">
+                                <p class="badge fourth "><strong>發布日期：</strong>2024年10月30日</p>
+                                <h2 class="card-title">發表會</h2>
+                                <button  class="card-button material-symbols-rounded">arrow_forward</button>
+                            </a>  
+                        </li>
+                    </ul>
+                    <!-- Swiper 分頁點 -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Swiper 前一頁和下一頁按鈕 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        <!-- 引入SwiperJS腳本 -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- 自定義SwiperJS的初始化腳本 -->
+        <script src="swiper.js"></script>
+
+            
+    </main>
+
+    <footer>
+        <p>copyright 2024 電腦工仿. 保留所有權利.</p>
+    </footer>
+<script src="latestnews.js"></script>
+</body>
+</html>
